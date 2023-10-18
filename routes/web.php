@@ -22,4 +22,5 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/product','ProductController@index');
+Route::get('/product',[ProductController::class,'index']);
+// Route::get('/product',[App\Http\Controllers\ProductController::class,'index']);
