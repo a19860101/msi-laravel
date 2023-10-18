@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello product</h1>
+    <h1>Product Index</h1>
 </body>
 </html>
