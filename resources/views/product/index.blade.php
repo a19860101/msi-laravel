@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Product Index</h1>
+    <a href="/product/create">Create</a>
+    <a href="<?php echo route('product.create'); ?>">Create</a>
+    <a href="{{route('product.create')}}">Create</a>
 </body>
 </html>

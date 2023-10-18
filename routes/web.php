@@ -22,7 +22,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/product',[ProductController::class,'index']);
+Route::get('/product',[ProductController::class,'index'])->name('product.index');
 // Route::get('/product',[App\Http\Controllers\ProductController::class,'index']);
 
-Route::get('/product/create',[ProductController::class,'create']);
+Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
