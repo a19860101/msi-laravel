@@ -27,3 +27,10 @@ php artisan make:model Name -mrc
 
 # Model名稱首字大寫並使用英文單數
 ```
+
+## 其他
+
+```=
+#啟動開發伺服器
+php artisan serve
+```
