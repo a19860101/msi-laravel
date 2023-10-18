@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,5 @@ Route::get('/welcome', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/product','ProductController@index');
