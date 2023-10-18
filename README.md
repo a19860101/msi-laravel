@@ -12,8 +12,17 @@ php artisan make:controller NameController --resource
 
 ## migration
 ```=
+## 執行migrate
+php artisan migrate
+
+## 重置migrate
+php artisan migrate:reset
+
+## 回復上一個migrate
+php artisan migrate:rollback
+
 # 建立migration
-php artisan make:migration create_name_table
+php artisan make:migration create_names_table
 ```
 
 ## model
