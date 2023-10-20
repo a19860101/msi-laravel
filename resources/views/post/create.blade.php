@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="{{route('post.store')}}" method="post">
+        @csrf
         <div>
             <label for="">標題</label>
             <input type="text" name="title">
