@@ -17,9 +17,17 @@ class PostController extends Controller
         //
         // select * from posts
         $posts = Post::get();
-        return view('post.index')->with([
-            'datas' => $posts
+        // 方法一
+        // return view('post.index')->with([
+        //     'datas' => $posts
+        // ]);
+        // 方法二
+        return view('post.index',[
+            'posts'=>$posts,
+            'status' => '檔案取得成功'
         ]);
+        // 方法三
+        // return view('post.index',compact('posts'));
 
     }
 

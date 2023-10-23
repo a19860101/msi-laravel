@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>文章列表</h1>
-    {{$datas}}
+    {{$posts}} / {{$status}}
 </body>
 </html>
