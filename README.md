@@ -59,13 +59,13 @@ php artisan serve
 
 ### 建立model,controller,migration 
 
-```****
+```=
 php artisan make:model -mrc
 ```
 
 ### 設定migration並且migrate
 
-```
+```=
 php artisan migrate
 ```
 
