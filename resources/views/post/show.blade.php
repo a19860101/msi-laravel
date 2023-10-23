@@ -15,6 +15,7 @@
         最後更新時間 {{$post->updated_at}}
     </div>
     <a href="{{route('post.index')}}">返回</a>
+    <a href="{{route('post.edit',$post->id)}}">編輯</a>
     {{-- <form action="/post/{{$post->id}}" method="post"> --}}
     <form action="{{route('post.delete',$post->id)}}" method="post">
         @csrf

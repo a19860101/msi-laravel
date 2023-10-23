@@ -36,5 +36,6 @@ Route::get('/post',[PostController::class,'index'])->name('post.index');
 // Route::get('/post/{id}',[PostController::class,'show']);
 Route::get('/post/{post}',[PostController::class,'show'])->name('post.show');
 Route::delete('/post/{post}',[PostController::class,'destroy'])->name('post.delete');
+Route::get('/post/{post}/edit',[PostController::class,'edit'])->name('post.edit');
 
 require __DIR__.'/auth.php';
