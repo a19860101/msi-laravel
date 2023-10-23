@@ -57,21 +57,20 @@ php artisan serve
 
 ## 建立CRUD的順序
 
-### 建立model,controller,migration 
+### 1. 建立model,controller,migration 
 
 ```=
 php artisan make:model -mrc
 ```
 
-### 設定migration並且migrate
+### 2. 設定migration並且migrate
 
 ```=
 php artisan migrate
 ```
 
-### 建立view(create,index,show,edit)
+### 3. 建立view(create,index,show,edit)
 
-### 建立route
+### 4. 建立route
 
-### 設定並串接controller、route與view
-
+### 5. 設定並串接controller、route與view
