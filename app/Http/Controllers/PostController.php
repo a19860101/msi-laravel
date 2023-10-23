@@ -15,6 +15,12 @@ class PostController extends Controller
     public function index()
     {
         //
+        // select * from posts
+        $posts = Post::get();
+        return view('post.index')->with([
+            'datas' => $posts
+        ]);
+
     }
 
     /**

@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    <h1>文章列表</h1>
+    {{$datas}}
 </body>
 </html>
