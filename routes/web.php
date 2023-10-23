@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,6 @@ Route::middleware('auth')->group(function () {
 // Route::patch('/post/{post}',[PostController::class,'update'])->name('post.update');
 
 Route::resource('/post',PostController::class);
+Route::resource('/category',CategoryController::class);
 
 require __DIR__.'/auth.php';

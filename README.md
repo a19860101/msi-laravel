@@ -54,3 +54,24 @@ php artisan make:model Name -mrc
 #啟動開發伺服器
 php artisan serve
 ```
+
+## 建立CRUD的順序
+
+1. 建立model,controller,migration 
+
+```
+php artisan make:model -mrc
+```
+
+2. 設定migration並且migrate
+
+```
+php artisan migrate
+```
+
+3. 建立view(create,index,show,edit)
+
+4. 建立路由
+
+5. 設定並串接controller跟路由
+
