@@ -57,7 +57,7 @@ class PostController extends Controller
         $post->save();
 
         // return redirect('post/create');
-        return redirect()->route('post.create');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class PostController extends Controller
     {
         //
         // $post = Post::find($post->id);
-        return $post;
+        return view('post.show',compact('post'));
     }
 
     /**
