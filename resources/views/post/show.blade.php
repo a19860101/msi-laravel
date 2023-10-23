@@ -19,7 +19,7 @@
     <form action="{{route('post.delete',$post->id)}}" method="post">
         @csrf
         @method('delete')
-        <input type="submit" value="刪除">
+        <input type="submit" value="刪除" onclick="return confirm('此動作無法回覆，確認刪除？')">
     </form>
 </body>
 </html>
