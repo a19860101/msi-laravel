@@ -16,7 +16,7 @@ class PostController extends Controller
     {
         //
         // select * from posts
-        $posts = Post::get();
+        $posts = Post::orderBy('id','desc')->get();
         // 方法一
         // return view('post.index')->with([
         //     'datas' => $posts
@@ -105,5 +105,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+        return $post;
     }
 }
