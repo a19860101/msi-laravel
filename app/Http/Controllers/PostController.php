@@ -22,12 +22,12 @@ class PostController extends Controller
         //     'datas' => $posts
         // ]);
         // 方法二
-        return view('post.index',[
-            'posts'=>$posts,
-            'status' => '檔案取得成功'
-        ]);
+        // return view('post.index',[
+        //     'posts'=>$posts,
+        //     'status' => '檔案取得成功'
+        // ]);
         // 方法三
-        // return view('post.index',compact('posts'));
+        return view('post.index',compact('posts'));
 
     }
 

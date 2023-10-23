@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>文章列表</h1>
-    {{$posts}} / {{$status}}
+    @foreach($posts as $post)
+    <div>
+        <h2>{{$post->title}}</h2>
+        <small>{{$post->created_at}}</small>
+        <div>
+            {{$post->body}}
+        </div>
+    </div>
+    @endforeach
 </body>
 </html>
