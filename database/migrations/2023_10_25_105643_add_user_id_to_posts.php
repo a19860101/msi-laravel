@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('category_id')->constrained();
 
         });
     }
@@ -28,6 +30,8 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
+            $table->dropForeign(['user_id','category_id']);
+            $table->dropColumn('user_id','category_id');
         });
     }
 };
