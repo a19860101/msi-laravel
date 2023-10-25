@@ -15,8 +15,6 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $cats = Category::get();
-        return view('category.index',compact('cats'));
     }
 
     /**
@@ -27,7 +25,6 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('category.create');
     }
 
     /**
@@ -39,12 +36,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $cats = new Category;
-        $cats->title = $request->title;
-        $cats->slug = $request->slug;
-        $cats->save();
-
-        return redirect()->route('category.index');
     }
 
     /**
