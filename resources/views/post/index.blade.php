@@ -15,6 +15,9 @@
         <h2>{{$post->title}}</h2>
         <small>{{$post->created_at}}</small>
         <div>
+            {{$post->category->title}}
+        </div>
+        <div>
             {{$post->body}}
             <a href="/post/{{$post->id}}">繼續閱讀</a>
             <a href="{{route('post.show',['post'=>$post->id])}}">繼續閱讀</a>

@@ -58,6 +58,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->body = $request->body;
         $post->user_id = Auth::id();
+        $post->category_id = $request->category_id;
         $post->save();
 
         // return redirect('post/create');

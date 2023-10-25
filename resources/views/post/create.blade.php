@@ -15,7 +15,7 @@
         </div>
         <div>
             <label for="">分類</label>
-            <select name="" id="">
+            <select name="category_id" id="">
                 @foreach($cats as $cat)
                 <option value="{{$cat->id}}">{{$cat->title}}</option>
                 @endforeach
