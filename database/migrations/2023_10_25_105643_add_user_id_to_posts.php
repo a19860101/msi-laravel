@@ -15,8 +15,13 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('category_id')->constrained();
+            //!!先建立欄位再建立外部鍵
+
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
+            // $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            // $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')->nullable()->constrained()->restrictOnDelete();
 
         });
     }
@@ -30,8 +35,12 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->dropForeign(['user_id','category_id']);
-            $table->dropColumn('user_id','category_id');
+            //!!先移除外部鍵再移除欄位
+
+            $table->dropForeign(['user_id']);
+            $table->dropForeign(['category_id']);
+            $table->dropColumn('user_id');
+            $table->dropColumn('category_id');
         });
     }
 };
