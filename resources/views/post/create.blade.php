@@ -14,6 +14,14 @@
             <input type="text" name="title">
         </div>
         <div>
+            <label for="">分類</label>
+            <select name="" id="">
+                @foreach($cats as $cat)
+                <option value="{{$cat->id}}">{{$cat->title}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div>
             <label for="">文章內文</label>
             <textarea name="body" id="" cols="30" rows="10"></textarea>
         </div>
