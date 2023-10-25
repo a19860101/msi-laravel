@@ -13,7 +13,7 @@
     @foreach($posts as $post)
     <div>
         <h2>{{$post->title}}</h2>
-        <small>{{$post->created_at}}</small>
+        <small>{{$post->user->name}} / {{$post->created_at}}</small>
         <div>
             {{$post->category->title}}
         </div>

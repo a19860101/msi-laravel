@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            //!! 先建立欄位再建立外部鍵
             $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
         });
     }
@@ -27,7 +27,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            //!! 先移除外部鍵再移除欄位
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
         });
