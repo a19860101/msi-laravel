@@ -27,5 +27,6 @@
         </div>
         <input type="submit" value="新增文章">
     </form>
+    {{$errors}}
 </body>
 </html>
