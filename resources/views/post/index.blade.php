@@ -9,7 +9,7 @@
 <body>
     <h1>文章列表</h1>
     <div>
-        {{Auth::user()->name}}
+        {{-- {{Auth::user()->name}} --}}
     </div>
     <div>
         @can('a')
