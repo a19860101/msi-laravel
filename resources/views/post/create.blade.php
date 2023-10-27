@@ -27,6 +27,10 @@
         </div>
         <input type="submit" value="新增文章">
     </form>
-    {{$errors}}
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+        <div>{{$error}}</div>
+        @endforeach
+    @endif
 </body>
 </html>
