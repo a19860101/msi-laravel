@@ -12,6 +12,9 @@
         <div>
             <label for="">標題</label>
             <input type="text" name="title">
+            @error('title')
+                <span>{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="">分類</label>
