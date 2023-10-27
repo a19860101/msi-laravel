@@ -9,6 +9,9 @@
 <body>
     <h1>文章列表</h1>
     <div>
+        {{Auth::user()->name}}
+    </div>
+    <div>
         @can('a')
         我是管理員
         @endcan
