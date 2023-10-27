@@ -8,7 +8,14 @@
 </head>
 <body>
     <h1>文章列表</h1>
-
+    <div>
+        @can('a')
+        我是管理員
+        @endcan
+        @can('u')
+        我是一般會員
+        @endcan
+    </div>
     @auth
     <a href="/post/create">建立文章</a>
     <a href="{{route('post.create')}}">建立文章</a>
