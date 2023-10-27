@@ -8,8 +8,16 @@
 </head>
 <body>
     <h1>文章列表</h1>
+
+    @auth
     <a href="/post/create">建立文章</a>
     <a href="{{route('post.create')}}">建立文章</a>
+    @endauth
+
+    @guest
+    訪客
+    @endguest
+
     @foreach($posts as $post)
     <div>
         <h2>{{$post->title}}</h2>
