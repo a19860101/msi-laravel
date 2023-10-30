@@ -81,6 +81,8 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
+        $this->authorize('view',$post);
+
         // $post = Post::find($post->id);
         return view('post.show',compact('post'));
     }

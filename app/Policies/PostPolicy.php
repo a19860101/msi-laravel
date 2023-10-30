@@ -32,7 +32,8 @@ class PostPolicy
     public function view(User $user, Post $post)
     {
         //
-        // return $user->id === $post->user_id;
+        return $user->id === $post->user_id ?
+                Response::allow() : Response::deny('您沒有閱讀此文章的權限！');
 
     }
 
